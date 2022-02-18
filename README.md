@@ -50,6 +50,6 @@ python /usr/local/bin/power-switch.py &
 # Done
 Be sure to test that it is functional. 
 
+![Example 1](https://i.postimg.cc/502dq2gT/1.jpg)
+![Example 2](https://scribles.net/wp-content/uploads/2017/12/power-switch-768x338.png)
 
-![alt text](https://scribles.net/wp-content/uploads/2017/12/power-switch-768x338.png "Logo Title Text 1")
-![alt text](https://i.postimg.cc/vHNB4pYG/1.jpg "Logo Title Text 1")

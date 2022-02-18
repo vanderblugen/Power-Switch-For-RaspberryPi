@@ -1,7 +1,8 @@
 # Power Switch For A RaspberryPi
-This for adding a power switch to trigger a script to turn off or on a RaspberryPi
-Information on this page was obtained from [here](https://scribles.net/adding-power-switch-on-raspberry-pi).
-This page was created for my ease of access.  Use information from this page at your own discretion.   
+This is for adding a power switch on a RaspberryPi to trigger a script to turn off or reboot.<br>
+Information on this page was obtained from [here](https://scribles.net/adding-power-switch-on-raspberry-pi).<br>
+This page was created for my ease of access.<br>
+Use information from this page at your own discretion.<br>
 
 ## What is needed
 * RaspberryPi

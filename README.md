@@ -2,18 +2,23 @@
 This for adding a power switch to trigger a script to turn off or on a RaspberryPi
 Information on this page was obtained from [here](https://scribles.net/adding-power-switch-on-raspberry-pi).
 This page was created for my ease of access.  Use information from this page at your own discretion.   
-  
-## For this you need a RaspberryPi, momentary switch, and adequate wiring
 
-# Wiring in
+## What is needed
+* RaspberryPi
+* Momentary switch
+* Adequate wiring
+
+## Wiring in
 Attach the momentary switch via wiring to GPIO pin 5 and 6 on the RaspberryPi
-[Link1 Reference](https://pinout.xyz/#), [Link2 Reference](https://pimylifeup.com/raspberry-pi-pinout/)
+Here's a few references
+* [Reference 1](https://pinout.xyz/#)
+* [Reference 2](https://pimylifeup.com/raspberry-pi-pinout/)
 
-# Shutdown and reboot script
-````bash
+## Shutdown and reboot script
+```bash
 sudo nano /usr/local/bin/power-switch.py
-````
-````bash
+```
+```bash
 import threading, subprocess
 import RPi.GPIO as GPIO
 
@@ -29,25 +34,23 @@ if __name__ == '__main__':
             subprocess.call('sudo reboot', shell=True)
     finally:
         GPIO.cleanup()
-````
-## What it does
-<ul>
-  <li>Push and hold for > 5 seconds shutdown the RaspberryPi</li>
-  <li>Push and hold for < 5 seconds reboots the RaspberryPi</li>
-</ul>
+```
+What this does
+* Push and hold for > 5 seconds shutdown the RaspberryPi
+* Push and hold for < 5 seconds reboots the RaspberryPi
 
-# Enable script at boot
-````bash
+## Enable script at boot
+```bash
 sudo nano /etc/rc.local
-````
+```
 
 Add a line before ````exit 0```` to execute the script at boot.
 
-````bash
+```bash
 python /usr/local/bin/power-switch.py &
-`````
+````
 
-# Done
+## Test
 Be sure to test that it is functional. 
 
 ![Example 1](https://i.postimg.cc/502dq2gT/1.jpg)

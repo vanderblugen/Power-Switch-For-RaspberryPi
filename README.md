@@ -15,10 +15,17 @@ Here's a few references
 * [Reference 1](https://pinout.xyz/#)
 * [Reference 2](https://pimylifeup.com/raspberry-pi-pinout/)
 
+## Upgrade GPIO for Python
+
+```bash
+sudo apt install python3-rpi-lgpio -y
+```
+
 ## Shutdown and reboot script
 ```bash
 sudo nano /usr/local/bin/power-switch.py
 ```
+
 ```bash
 import threading, subprocess
 import RPi.GPIO as GPIO
